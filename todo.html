@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="index.html" class="nav-link">Calculator</a>
+            <a href="todo.html" class="nav-link active">To-Do List</a>
+        </div>
+        
+        <h1>My To-Do List</h1>
+        
+        <div class="todo-app">
+            <div class="input-section">
+                <input 
+                    type="text" 
+                    id="todoInput" 
+                    placeholder="Add a new task..." 
+                    class="todo-input"
+                >
+                <button onclick="addTodo()" class="add-btn">Add</button>
+            </div>
+            
+            <div class="filter-section">
+                <button onclick="filterTodos('all')" class="filter-btn active" id="filter-all">All</button>
+                <button onclick="filterTodos('active')" class="filter-btn" id="filter-active">Active</button>
+                <button onclick="filterTodos('completed')" class="filter-btn" id="filter-completed">Completed</button>
+            </div>
+            
+            <ul id="todoList" class="todo-list"></ul>
+            
+            <div class="stats">
+                <span id="todoCount">0 tasks</span>
+                <button onclick="clearCompleted()" class="clear-completed-btn">Clear Completed</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="todo.js"></script>
+</body>
+</html>
+
