@@ -1,0 +1,262 @@
+html,
+body {
+   width: 100%;
+   min-height: 100vh;
+   margin: 0;
+   padding: 0;
+   font-family: "Trebuchet MS", Helvetica, sans-serif;
+   font-size: 16px;
+}
+
+body {
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   background-color: #f5f5f5;
+   padding: 20px;
+}
+
+.container {
+   width: 100%;
+   max-width: 600px;
+   margin-top: 20px;
+}
+
+.nav {
+   display: flex;
+   justify-content: center;
+   gap: 10px;
+   margin-bottom: 30px;
+}
+
+.nav-link {
+   padding: 10px 20px;
+   text-decoration: none;
+   color: #333;
+   background-color: #fff;
+   border-radius: 5px;
+   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+   transition: all 0.3s;
+}
+
+.nav-link:hover {
+   background-color: #ff9500;
+   color: #fff;
+}
+
+.nav-link.active {
+   background-color: #ff9500;
+   color: #fff;
+}
+
+h1 {
+   text-align: center;
+   color: #333;
+   margin-bottom: 30px;
+}
+
+.todo-app {
+   background-color: #fff;
+   border-radius: 10px;
+   box-shadow: 0 25px 60px -10px rgba(0,0,0,0.5);
+   padding: 30px;
+}
+
+.input-section {
+   display: flex;
+   gap: 10px;
+   margin-bottom: 20px;
+}
+
+.todo-input {
+   flex: 1;
+   padding: 15px;
+   font-size: 16px;
+   border: 2px solid #e0e0e0;
+   border-radius: 5px;
+   font-family: "Trebuchet MS", Helvetica, sans-serif;
+   outline: none;
+   transition: border-color 0.3s;
+}
+
+.todo-input:focus {
+   border-color: #ff9500;
+}
+
+.add-btn {
+   padding: 15px 30px;
+   background-color: #ff9500;
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   font-size: 16px;
+   font-weight: bold;
+   cursor: pointer;
+   transition: opacity 0.2s;
+   font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.add-btn:hover {
+   opacity: 0.8;
+}
+
+.add-btn:active {
+   opacity: 0.6;
+}
+
+.filter-section {
+   display: flex;
+   gap: 10px;
+   margin-bottom: 20px;
+   justify-content: center;
+}
+
+.filter-btn {
+   padding: 8px 16px;
+   background-color: #f0f0f0;
+   color: #333;
+   border: none;
+   border-radius: 5px;
+   font-size: 14px;
+   cursor: pointer;
+   transition: all 0.3s;
+   font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.filter-btn:hover {
+   background-color: #e0e0e0;
+}
+
+.filter-btn.active {
+   background-color: #ff9500;
+   color: #fff;
+}
+
+.todo-list {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   max-height: 400px;
+   overflow-y: auto;
+}
+
+.todo-item {
+   display: flex;
+   align-items: center;
+   padding: 15px;
+   margin-bottom: 10px;
+   background-color: #f9f9f9;
+   border-radius: 5px;
+   transition: all 0.3s;
+   border-left: 4px solid transparent;
+}
+
+.todo-item:hover {
+   background-color: #f0f0f0;
+   border-left-color: #ff9500;
+}
+
+.todo-item.completed {
+   opacity: 0.6;
+}
+
+.todo-item.completed .todo-text {
+   text-decoration: line-through;
+   color: #999;
+}
+
+.todo-checkbox {
+   width: 20px;
+   height: 20px;
+   margin-right: 15px;
+   cursor: pointer;
+   accent-color: #ff9500;
+}
+
+.todo-text {
+   flex: 1;
+   font-size: 16px;
+   color: #333;
+   word-wrap: break-word;
+}
+
+.todo-delete {
+   background-color: #ff5252;
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   padding: 8px 15px;
+   cursor: pointer;
+   font-size: 14px;
+   transition: opacity 0.2s;
+   font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.todo-delete:hover {
+   opacity: 0.8;
+}
+
+.todo-delete:active {
+   opacity: 0.6;
+}
+
+.stats {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 20px;
+   padding-top: 20px;
+   border-top: 1px solid #e0e0e0;
+}
+
+#todoCount {
+   color: #666;
+   font-size: 14px;
+}
+
+.clear-completed-btn {
+   padding: 8px 16px;
+   background-color: #ff5252;
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   font-size: 14px;
+   cursor: pointer;
+   transition: opacity 0.2s;
+   font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.clear-completed-btn:hover {
+   opacity: 0.8;
+}
+
+.clear-completed-btn:active {
+   opacity: 0.6;
+}
+
+.empty-state {
+   text-align: center;
+   padding: 40px 20px;
+   color: #999;
+   font-size: 16px;
+}
+
+/* Scrollbar styling */
+.todo-list::-webkit-scrollbar {
+   width: 8px;
+}
+
+.todo-list::-webkit-scrollbar-track {
+   background: #f1f1f1;
+   border-radius: 10px;
+}
+
+.todo-list::-webkit-scrollbar-thumb {
+   background: #ff9500;
+   border-radius: 10px;
+}
+
+.todo-list::-webkit-scrollbar-thumb:hover {
+   background: #e6850e;
+}
+
